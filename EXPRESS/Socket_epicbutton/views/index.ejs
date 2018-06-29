@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Epic Button Game">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<title>Epic Button Game</title>
+
+
+	<script>
+		$(document).ready(function () {
+			// jquery here;
+			var socket = io.connect();
+			socket.emit('start');
+			function update_count(data) {
+				$('#counter').html(`<h1>The button has been pushed ${data.count} times</h1>`);
+			};
+
+
+			socket.on('update', function (data) {
+				update_count(data);
+			});
+
+			$('#epic').click(function () {
+				socket.emit('epic');
+			});
+			$('#bold').click(function () {
+				socket.emit('bold');
+			});
+
+			$('#cold').click(function () {
+				socket.emit('cold');
+			});
+
+			$('#reset').click(function () {
+				socket.emit('reset');
+			});
+
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="bootsrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div id="counter">
+
+		</div>
+
+		<div>
+			<p>Push the button to update the count</p>
+			<p>
+				<button id="epic">
+					<strong>PUSH ME, I'M EPIC</strong>
+				</button>
+			</p>
+			<p>
+				<button id="bold">
+					<strong>BE BOLD ADD 2</strong>
+				</button>
+			</p>
+			<p>
+				<button id="cold">
+					<strong>BE COLD MINUS 1</strong>
+				</button>
+			</p>
+		</div>
+		<div>
+			<button id="reset">RESET</button>
+		</div>
+
+
+	</div>
+</body>
+
+</html>

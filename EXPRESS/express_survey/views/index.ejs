@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="bootsrap.min.css">
+    <title>Survey</title>
+</head>
+<body>
+    <form action='/result' method='POST'>
+        <div class="form-group">
+        Your name: <input name="name" type="text" class="form-control"></input><br>
+        Dojo Location:
+            <select class="form-control" name="location" >
+                <option value="baltimore">Baltimore</option>
+                <option value="dc">Washington D.C.</option>
+                <option value="newyork">New York</option>
+                <option value="chicago">Chicago</option>
+            </select><br>
+        Favorite Language: 
+            <select class="form-control" name="language" >
+                <option value="javascript">Javascript</option>
+                <option value="python">Python</option>
+                <option value="ruby">Ruby</option>
+                <option value="french">French</option>
+            </select><br>
+        Comment (optional): <textarea class="form-control" name="comment"></textarea><br>
+        <button id="button" type="submit" value="submit" class="btn">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #575757;
+
+}
+.galleryImg {
+    width: 200px;
+    border-style: solid;
+    border-color: #292929;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover { 
+    color: rgb(207, 105, 113);
+}

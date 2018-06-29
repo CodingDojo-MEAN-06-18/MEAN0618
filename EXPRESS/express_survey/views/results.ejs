@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="bootsrap.min.css">
+
+    <title>Results</title>
+</head>
+<body>
+    <h2>Submitted Information:</h2>
+    <h3>Name: <%= info.name %></h3>
+    <h4>Location: <%= info.location %></h4>
+    <h4>Language: <%= info.language %></h4>
+    <h4>Comment: <%= info.comment %></h4>
+    <form action='/return' method='GET'>
+        <div class="form-group">
+    <button id="button" type="submit" value="submit" class="btn">GO BACK</button>
+</div>
+</form>
+</body>
+</html>

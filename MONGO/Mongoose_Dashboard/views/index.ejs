@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dogs!</title>
+</head>
+<body>
+  <h1>Dog Pack</h1>
+  <a href="/new">Add a new dog:</a>
+  <!-- display dogs -->
+  <% for (const dog of dogs) { %>
+    <p>Name:<a href="/<%=dog._id %>"><%=dog.name %></a>
+        <a href="/<%= dog._id %>/edit/"><button>Edit dog</button></a>
+        <form action="/<%= dog._id %>/delete/" method='post'>
+            <input type="submit" value="Delete">
+        </form>
+    </p>
+  <% } %>
+</body>
+</html>
+
+
+

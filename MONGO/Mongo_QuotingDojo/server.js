@@ -5,6 +5,7 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 
+////
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./static")));
 app.set("views", path.join(__dirname, "./views"));

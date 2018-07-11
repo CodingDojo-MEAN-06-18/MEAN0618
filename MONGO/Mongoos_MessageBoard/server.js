@@ -16,15 +16,16 @@ app.set("views", path.join(__dirname, "./views"));
 // Setting our View Engine set to EJS
 app.set("view engine", "ejs");
 // Use native promises
+mongoose.Promise = global.Promise;
 
 mongoose.connect("mongodb://localhost/messages");
 mongoose.connection.on("connected", () => console.log("Mongodb connected"));
-mongoose.Promise = global.Promise;
 
-const { Schema } = mongoose;
 // const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-// Create Schemas for models
+
+// SCHEMAS
 const messageSchema = new Schema(
   {
     name: {
@@ -69,16 +70,14 @@ const commentSchema = new Schema(
   }
 );
 
-// creates collection => messages
+// creates messages
 const Message = mongoose.model("Message", messageSchema);
 
-// creates collection => comments
+// creates comments
 const Comment = mongoose.model("Comment", commentSchema);
 
-// Use native promises -- do I need this? It was in the platform example
-mongoose.Promise = global.Promise;
 
-// Create Routes
+// ROUTES
 
 // Root Request -- render the index view
 app.get("/", function(req, res) {

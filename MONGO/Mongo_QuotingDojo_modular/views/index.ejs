@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quoting Dojo</title>
+</head>
+<body>
+        <div class="container">
+    <h1>Welcome to Quoting Dojo</h1>
+    <form action='/quotes' method='POST' class= "form-group awesomeQuotes">
+            <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                        <label for="quotes">Quote</label>
+                        <textarea class="form-control" textarea name="quote" id="" cols="30" rows="10"  placeholder="Type your quote here"></textarea>
+                      </div>
+                      <div class="form-group">
+                            <label for="Author">Author</label>
+                            <input type="text" name="author" id="author" placeholder="Author" class="form-control">
+                          </div>
+        <input class="btn btn-success"type="submit" value="Add my quote!">
+        <a href="/quotes"><button type="button" class="btn btn-primary">Skip to quotes!</button></a>
+
+    </form>
+</div>
+</body>
+</html>

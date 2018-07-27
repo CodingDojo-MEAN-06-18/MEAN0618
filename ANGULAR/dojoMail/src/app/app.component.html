@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left">
+  <h1>{{ title | uppercase }}</h1>
+</div>
+
+<table>
+  <thead>
+    <span [ngClass]="{ 'text-align': left  }">
+      <th>Email</th>
+      <th>Importance</th>
+      <th>Subject</th>
+      <th>Content</th>
+    </span>
+  </thead>
+  <tbody>
+    <tr>
+      <span [ngClass]="{ 'text-align': left  }">
+        <td>{{user1.email | lowercase}}</td>
+        <td>{{user1.importance}}</td>
+        <td>{{user1.subject}}</td>
+        <td>{{user1.content}}</td>
+      </span>
+    </tr>
+    <tr>
+      <span [ngClass]="{ 'text-align': left  }">
+        <td>{{user2.email | lowercase}}</td>
+        <td>{{user2.importance}}</td>
+        <td>{{user2.subject}}</td>
+        <td>{{user2.content}}</td>
+      </span>
+    </tr>
+    <tr>
+      <span [ngClass]="{ 'text-align': left  }">
+        <td>{{user3.email | lowercase}}</td>
+        <td>{{user3.importance}}</td>
+        <td>{{user3.subject}}</td>
+        <td>{{user3.content}}</td>
+      </span>
+    </tr>
+    <tr>
+      <span [ngClass]="{ 'text-align': left  }">
+        <td>{{user4.email | lowercase}}</td>
+        <td>{{user4.importance}}</td>
+        <td>{{user4.subject}}</td>
+        <td>{{user4.content}}</td>
+      </span>
+    </tr>
+  </tbody>
+
+</table>

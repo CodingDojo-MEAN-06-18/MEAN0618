@@ -1,0 +1,64 @@
+/* .square { 
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    background-color: rgb(204, 0, 0); 
+} */
+
+.on {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(9, 184, 9);
+  border-bottom: 5px solid green;
+  text-shadow: 0px -2px green;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.off {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(219, 52, 52);
+  border-bottom: 5px solid rgb(168, 3, 3);
+  text-shadow: 0px -2px rgb(168, 3, 3);
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.bar {
+  background-color: darkgray;
+}
+
+.bold {
+  font-weight: bolder;
+}
+.titlebar {
+  background-color: #f1f1f1;
+  color: #fff;
+  font-size: 12em;
+  font-weight: bold;
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+.titlebar {
+    text-align: center;
+    text-transform: uppercase;
+}
